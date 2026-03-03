@@ -1,86 +1,119 @@
-# 🚧 Automated Vehicle Barrier System (AVBS)
+# 🚧 Automated Vehicle Barrier System (AI + IoT)
 
-An AI + IoT powered gate automation system that detects vehicles, recognizes license plates, and physically controls a barrier using Arduino.
-
----
-
-## 📌 Project Overview
-
-The Automated Vehicle Barrier System (AVBS) is an intelligent access control solution that integrates Computer Vision, OCR, and IoT hardware to automate vehicle entry management in gated communities, institutions, and private facilities.
-
-The system detects vehicles in real time, reads license plates, logs entry data into a database, and sends control signals to an Arduino microcontroller to operate a physical barrier.
+An AI-powered access control system that combines Computer Vision and IoT to automate vehicle entry using real-time license plate recognition and Arduino-based barrier control.
 
 ---
 
-## 🧠 Core Technologies Used
+## 📌 Overview
 
-### 💻 Software
-- Python
-- Flask
-- YOLO (Object Detection)
-- PaddleOCR
-- MySQL (XAMPP)
-- HTML / CSS
+The Automated Vehicle Barrier System (AVBS) is an intelligent infrastructure solution designed to automate vehicle access in gated environments. 
 
-### 🔌 Hardware / IoT
-- Arduino (Microcontroller)
-- Barrier control mechanism (servo/motor)
-- Serial communication (Python ↔ Arduino)
+The system integrates:
+- YOLO-based vehicle detection
+- OCR-based license plate recognition
+- Flask backend server
+- MySQL database logging
+- Arduino-controlled physical barrier
+
+This project demonstrates full-stack AI integration with embedded systems.
 
 ---
 
-## 🚀 Features
+## 🧠 Key Capabilities
 
-- Real-time vehicle detection using YOLO
-- License plate recognition using PaddleOCR
-- Live video streaming via Flask dashboard
-- MySQL database logging with timestamps
-- Automated barrier control using Arduino
-- Serial communication between backend and microcontroller
-- Intelligent decision-based gate opening
+✔ Real-time vehicle detection  
+✔ License plate extraction and recognition  
+✔ Entry logging with timestamps  
+✔ Decision-based barrier activation  
+✔ Serial communication with Arduino  
+✔ Live dashboard monitoring  
+
+---
+
+## 🔌 IoT Integration
+
+The backend communicates with an Arduino microcontroller via serial communication.
+
+Workflow:
+1. License plate is detected and processed
+2. Access decision is made
+3. Python sends control signal via serial port
+4. Arduino activates servo/motor to lift barrier
 
 ---
 
 ## 🏗 System Architecture
 
-Camera → YOLO Detection → Plate Extraction → OCR Recognition →  
-Database Logging → Access Decision →  
-Serial Signal → Arduino → Barrier Motor Control
+Camera  
+↓  
+YOLO Detection  
+↓  
+Plate Cropping  
+↓  
+PaddleOCR Recognition  
+↓  
+MySQL Logging  
+↓  
+Access Decision  
+↓  
+Serial Signal  
+↓  
+Arduino  
+↓  
+Barrier Motor  
 
 ---
 
-## ⚙ How It Works
+## 🛠 Tech Stack
 
-1. Camera captures vehicle feed
-2. YOLO detects vehicle and license plate
-3. OCR extracts plate number
-4. Plate is checked/logged in database
-5. If access is granted:
-   - Python sends signal via serial communication
-   - Arduino receives signal
-   - Barrier motor activates
+### Software
+- Python
+- Flask
+- YOLO
+- PaddleOCR
+- MySQL (XAMPP)
+
+### Hardware
+- Arduino
+- Servo / Motor Driver
+- Serial Communication
+
+---
+
+## 📂 Project Structure
+---
+
+## ⚙ Installation
+
+1. Clone the repository
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Start MySQL via XAMPP
+4. Configure database credentials
+5. Connect Arduino via USB
+6. Run:
+   python app.py
 
 ---
 
 ## 🔮 Future Improvements
 
-- Cloud-based remote monitoring
-- Mobile app integration
-- Multi-camera scalability
-- RFID + AI hybrid access control
-- Edge AI optimization
+- Cloud deployment
+- Mobile app monitoring
+- Multi-camera support
+- RFID + AI hybrid authentication
+- Edge AI performance optimization
 
 ---
 
-## 🎯 Impact
+## 🎯 Engineering Focus
 
-This project demonstrates integration of:
-
-- Artificial Intelligence
-- Backend Web Development
-- Database Systems
-- IoT Hardware Control
-- Embedded Systems Communication
+This project demonstrates:
+- AI model integration
+- Backend API development
+- Real-time system architecture
+- Embedded systems communication
+- IoT automation
 
 ---
 

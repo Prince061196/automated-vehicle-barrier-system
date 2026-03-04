@@ -93,6 +93,16 @@ Barrier Motor
 ---
 
 ## 📂 Project Structure
+
+app.py
+hardware/
+models/
+static/
+templates/
+data/
+requirements.txt
+README.md
+
 ---
 
 ## ⚙ Installation
